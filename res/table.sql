@@ -1,9 +1,9 @@
 -- codice sql per la creazione della prima tabella.
-CREATE TABLE arduino2223(
+CREATE TABLE arduino(
     id INTEGER UNSIGNED AUTO_INCREMENT,
     feature INTEGER(1),
     dev_id INTEGER(1),
-    onoff VARCHAR (7),
+    onoff VARCHAR (255),
 
     PRIMARY KEY(id)
 );
