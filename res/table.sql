@@ -1,15 +1,15 @@
 -- sql code for creating the first table
 CREATE TABLE arduino(
-    id INTEGER UNSIGNED AUTO_INCREMENT,
-    feature INTEGER(1),
-    dev_id INTEGER(1),
-    onoff VARCHAR (255),
+    Id INTEGER UNSIGNED AUTO_INCREMENT NOT NULL,
+    Descr VARCHAR(20) NOT NULL,
+    OnOff VARCHAR(3) NOT NULL, -- solo On o Off (!!--CASE SENSITIVE--!!)
+    String VARCHAR(20),
 
-    PRIMARY KEY(id)
+    PRIMARY KEY(Id)
 );
 
 -- codice per inserire componente nella tabella creata
-INSERT INTO arduino(feature, dev_id, onoff)
-VALUES(0, 0, 'OFF'); -- example of a led 
+INSERT INTO arduino(Id, Descr, OnOff, String)
+VALUES(0, 0, 'On', ""); -- example of a led 
 
 -- by @nicolasBaratella
