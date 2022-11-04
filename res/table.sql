@@ -10,6 +10,6 @@ CREATE TABLE arduino2223(
 
 -- codice per inserire componente nella tabella creata
 INSERT INTO arduino2223(feature, dev_id, val)
-VALUES(0, /*intercambiabile*/, 'OFF');
+VALUES(0, 0, 'OFF'); -- example of a led 
 
 -- by @nicolasBaratella
