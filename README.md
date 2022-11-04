@@ -18,4 +18,4 @@
 | Gandolfi    | Canale       | Hardware                        |
 | Mantovani   | Canale       | Software Desing & Documentation |
 | Xu          | Canale       | User Intefrace & User Expirence |
-|             |              |                                 |
+
