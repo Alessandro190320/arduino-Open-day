@@ -9,7 +9,7 @@ CREATE TABLE arduino(
 );
 
 -- codice per inserire componente nella tabella creata
-INSERT INTO arduino(feature, dev_id, val)
+INSERT INTO arduino(feature, dev_id, onoff)
 VALUES(0, 0, 'OFF'); -- example of a led 
 
 -- by @nicolasBaratella
