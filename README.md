@@ -1,7 +1,7 @@
 # Progetto Arduino per Open day 12/09 
 
-| cognome           | componente   | sezione                         |
-| ------------------| ------------ | ------------------------------- |
+| cognome     | componente   | sezione                         |
+| ------------| ------------ | ------------------------------- |
 | Baratella   | Semafori     | Server                          |
 | Modenasi    | Semafori     | Hardware                        |
 | Monesi      | Semafori     | Software Desing & Documentation |
