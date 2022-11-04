@@ -1,0 +1,2 @@
+# Caratteristiche tabella database 
+
