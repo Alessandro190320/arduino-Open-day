@@ -1,4 +1,4 @@
--- codice sql per la creazione della prima tabella.
+-- sql code for creating the first table
 CREATE TABLE arduino(
     id INTEGER UNSIGNED AUTO_INCREMENT,
     feature INTEGER(1),
@@ -9,7 +9,7 @@ CREATE TABLE arduino(
 );
 
 -- codice per inserire componente nella tabella creata
-INSERT INTO arduino2223(feature, dev_id, val)
+INSERT INTO arduino(feature, dev_id, val)
 VALUES(0, 0, 'OFF'); -- example of a led 
 
 -- by @nicolasBaratella
