@@ -91,3 +91,4 @@ void loop()
         if (data > prec_data)
             prec_data = data;
     }
+}
