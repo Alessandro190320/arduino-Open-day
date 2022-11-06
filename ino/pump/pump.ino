@@ -1,11 +1,24 @@
 // code pump
+int bot = 10;
+int lettura = LOW; 
+int stato = LOW; 
+
+int rel = 6; 
 
 void setup()
 {
-    // put your setup code here, to run once:
+    pinMode(bot, INPUT); 
+    pinMode(rel, OUTPUT);
 }
 
 void loop()
 {
-    // put your main code here, to run repeatedly:
+   lettura = digitalRead(bot); 
+   if ( lettura != stato and lettura == HIGH ) 
+   {
+    digitalWrite(bot,HIGH); 
+   }
+
+   stato = lettura; 
+   delay(10);
 }
