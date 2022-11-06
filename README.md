@@ -18,3 +18,9 @@
 | Gandolfi    | Canale       | Hardware                        |
 | Mantovani   | Canale       | Software Desing & Documentation |
 | Xu          | Canale       | User Intefrace & User Expirence |
+
+
+* ino: Folder containing codes for Arduino with relative wiring diagram
+* required: Folder containing php codes 
+* res: Folder containing SQL files and related database structure 
+* UI-UX: Folder containing UI-UX files (html,css,javascript...)
