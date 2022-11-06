@@ -1,5 +1,10 @@
 # Progetto Arduino per Open day 12/09 
 
+* ino: Folder containing codes for Arduino with relative wiring diagram
+* required: Folder containing php codes 
+* res: Folder containing SQL files and related database structure 
+* UI-UX: Folder containing UI-UX files (html,css,javascript...)
+
 | cognome     | componente   | sezione                         |
 | ------------| ------------ | ------------------------------- |
 | Baratella   | Semafori     | Server                          |
@@ -20,7 +25,3 @@
 | Xu          | Canale       | User Intefrace & User Expirence |
 
 
-* ino: Folder containing codes for Arduino with relative wiring diagram
-* required: Folder containing php codes 
-* res: Folder containing SQL files and related database structure 
-* UI-UX: Folder containing UI-UX files (html,css,javascript...)
