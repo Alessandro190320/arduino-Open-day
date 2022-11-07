@@ -12,4 +12,3 @@ CREATE TABLE arduino(
 INSERT INTO arduino(Id, Descr, OnOff, String)
 VALUES(0, 0, 'On', ""); -- example of a led 
 
--- by @nicolasBaratella
