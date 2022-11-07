@@ -5,23 +5,23 @@
 * res: Folder containing SQL files and related database structure 
 * UI-UX: Folder containing UI-UX files (html,css,javascript...)
 
-| cognome     | componente   | sezione                         |
-| ------------| ------------ | ------------------------------- |
-| Baratella   | Semafori     | Server                          |
-| Modenasi    | Semafori     | Hardware                        |
-| Monesi      | Semafori     | Software Desing & Documentation |
-| Neagu       | Semafori     | User Intefrace & User Expirence |
-| Bassi       | Fotovoltaici | Hardware                        |
-| Bianchini   | Fotovoltaici | Server                          |
-| Marcheselli | Fotovoltaici | User Intefrace & User Expirence |
-| Pirani      | Fotovoltaici | Software Desing & Documentation |
-| Bushi       | Insegna      | User Intefrace & User Expirence |
-| Ghirotto    | Insegna      | Server                          |
-| Mantovani   | Insegna      | Hardware                        |
-| Zhu         | Insegna      | Software Desing & Documentation |
-| Furci       | Canale       | Server                          |
-| Gandolfi    | Canale       | Hardware                        |
-| Mantovani   | Canale       | Software Desing & Documentation |
-| Xu          | Canale       | User Intefrace & User Expirence |
+|  nome      | cognome     | componente   | sezione                         |
+|----------- | ----------- | ------------ | ------------------------------- |
+| Nicolas    | Baratella   | Semafori     | Server                          |
+| Giacomo    | Modenasi    | Semafori     | Hardware                        |
+| Alessio    | Monesi      | Semafori     | Software Desing & Documentation |
+| Gabriel    | Neagu       | Semafori     | User Intefrace & User Expirence |
+| Nicholas   | Bassi       | Fotovoltaici | Hardware                        |
+| Andrea     | Bianchini   | Fotovoltaici | Server                          |
+| Alessandro | Marcheselli | Fotovoltaici | User Intefrace & User Expirence |
+| Denny      | Pirani      | Fotovoltaici | Software Desing & Documentation |
+| Brian      | Bushi       | Insegna      | User Intefrace & User Expirence |
+| Lorenzo    | Ghirotto    | Insegna      | Server                          |
+| Alexia     | Mantovani   | Insegna      | Hardware                        |
+| David      | Zhu         | Insegna      | Software Desing & Documentation |
+| Alessandro | Furci       | Canale       | Server                          |
+| Marco      | Gandolfi    | Canale       | Hardware                        |
+| Alessandro | Mantovani   | Canale       | Software Desing & Documentation |
+| Jiaxiang   | Xu          | Canale       | User Intefrace & UserExpirence  |
 
 
