@@ -1,0 +1,55 @@
+body {
+    background: url(./image/smartcity3.jpg) !important;
+    background-repeat: no-repeat;
+}
+
+.box {
+    height: 300px;
+    width: 500px;
+    background: #fff;
+    opacity: 0.75;
+    border-color: #fff;
+    border-width: 5px;
+    border-radius: 40px
+}
+
+.btn-on {
+    width: 60px;
+    height: 25px;
+    margin: 0 3px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.btn-on {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid white;
+    background-color: green;
+}
+
+.btn-on-circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    transition: all .5s;
+}
+
+.btn-on-text {
+    position: absolute;
+    right: 10px;
+    line-height: 25px;
+    color: white;
+    transition: all .5s;
+}
+
+.titolo {
+    color: #fff;
+    font-size: 5rem;
+    text-align: center !important;
+}
