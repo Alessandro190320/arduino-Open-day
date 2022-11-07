@@ -1,0 +1,167 @@
+body {
+    background: url(../image/smartcity3.jpg) !important;
+    background-repeat: no-repeat;
+}
+
+.titolo {
+    color: #fff;
+    font-size: 5rem;
+    text-align: center !important;
+}
+
+.box {
+    height: 300px;
+    width: 500px;
+    background: #fff;
+    opacity: 0.75;
+    border-color: #fff;
+    border-width: 5px;
+    border-radius: 40px;
+}
+
+
+
+/*Btn 0*/
+
+.btn-on-0 {
+    width: 60px;
+    height: 25px;
+    margin: 0 3px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.btn-on-0 {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid white;
+    background-color: green;
+}
+
+.btn-on-circle-0 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    transition: all .5s;
+}
+
+.btn-on-text-0 {
+    position: absolute;
+    right: 10px;
+    line-height: 25px;
+    color: white;
+    transition: all .5s;
+}
+
+/*Btn 1 */
+.btn-on-1 {
+    width: 60px;
+    height: 25px;
+    margin: 0 3px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.btn-on-1 {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid white;
+    background-color: green;
+}
+
+.btn-on-circle-1 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    transition: all .5s;
+}
+
+.btn-on-text-1 {
+    position: absolute;
+    right: 10px;
+    line-height: 25px;
+    color: white;
+    transition: all .5s;
+}
+
+/*Btn 2 */
+.btn-on-2 {
+    width: 60px;
+    height: 25px;
+    margin: 0 3px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.btn-on-2 {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid white;
+    background-color: green;
+}
+
+.btn-on-circle-2 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    transition: all .5s;
+}
+
+.btn-on-text-2 {
+    position: absolute;
+    right: 10px;
+    line-height: 25px;
+    color: white;
+    transition: all .5s;
+}
+
+/*Btn 3 */
+.btn-on-3 {
+    width: 60px;
+    height: 25px;
+    margin: 0 3px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.btn-on-3 {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid white;
+    background-color: green;
+}
+
+.btn-on-circle-3 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    transition: all .5s;
+}
+
+.btn-on-text-3 {
+    position: absolute;
+    right: 10px;
+    line-height: 25px;
+    color: white;
+    transition: all .5s;
+}
