@@ -5,8 +5,8 @@
 * res: Folder containing SQL files and related database structure 
 * UI-UX: Folder containing UI-UX files (html,css,javascript...)
 
-|  nome      | cognome     | Id Github          | componente   | sezione                         |
-|----------- | ----------- | ------------------ | ------------ | ------------------------------- |
+| Nome       | Cognome     | Id Github          | Componente  | Sezione                         |
+|----------- | ----------- | ------------------ | ----------- | ------------------------------- |
 | Nicolas    | Baratella   | @Nicobara08        |Semafori     | Server                          |
 | Giacomo    | Modenasi    | @Jack_00           |Semafori     | Hardware                        |
 | Alessio    | Monesi      | @Monesi-Alessio    |Semafori     | Software Desing & Documentation |
