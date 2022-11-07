@@ -88,3 +88,27 @@ function on_off_3(type) {
     btn.setAttribute("onclick", "on_off_3(" + !type + ")");
 }
 on_off_3(false)
+
+
+// Btn 4
+
+function on_off_4(type) {
+    var btn = document.getElementsByClassName("btn-on-4")[0];
+    var circle = document.getElementsByClassName("btn-on-circle-4")[0];
+    var text = document.getElementsByClassName("btn-on-text-4")[0];
+
+    if (!type) {
+        btn.style = "background-color: red;"
+        circle.style = "left: 40px;background-color: white;box-shadow: 0 0 10px #888;";
+        text.style = "right: 30px;color: white;";
+        text.innerText = "OFF";
+    }
+    else {
+        btn.style = "";
+        circle.style = "";
+        text.style = "";
+        text.innerText = "ON";
+    }
+    btn.setAttribute("onclick", "on_off_4(" + !type + ")");
+}
+on_off_4(false)
