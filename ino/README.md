@@ -1,5 +1,6 @@
 # Cartella sviluppo hardware 
 
+* all --> wiring diagram 
 * display OLED --> arduino script & wiring diagram
 * pump --> arduino script & wiring diagram
 * semaphore --> arduino script & wiring diagram
