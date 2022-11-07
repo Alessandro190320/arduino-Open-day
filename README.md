@@ -5,23 +5,23 @@
 * res: Folder containing SQL files and related database structure 
 * UI-UX: Folder containing UI-UX files (html,css,javascript...)
 
-|  nome      | cognome     | componente   | sezione                         |
-|----------- | ----------- | ------------ | ------------------------------- |
-| Nicolas    | Baratella   | Semafori     | Server                          |
-| Giacomo    | Modenasi    | Semafori     | Hardware                        |
-| Alessio    | Monesi      | Semafori     | Software Desing & Documentation |
-| Gabriel    | Neagu       | Semafori     | User Intefrace & User Expirence |
-| Nicholas   | Bassi       | Fotovoltaici | Hardware                        |
-| Andrea     | Bianchini   | Fotovoltaici | Server                          |
-| Alessandro | Marcheselli | Fotovoltaici | User Intefrace & User Expirence |
-| Denny      | Pirani      | Fotovoltaici | Software Desing & Documentation |
-| Brian      | Bushi       | Insegna      | User Intefrace & User Expirence |
-| Lorenzo    | Ghirotto    | Insegna      | Server                          |
-| Alexia     | Mantovani   | Insegna      | Hardware                        |
-| David      | Zhu         | Insegna      | Software Desing & Documentation |
-| Alessandro | Furci       | Canale       | Server                          |
-| Marco      | Gandolfi    | Canale       | Hardware                        |
-| Alessandro | Mantovani   | Canale       | Software Desing & Documentation |
-| Jiaxiang   | Xu          | Canale       | User Intefrace & UserExpirence  |
+|  nome      | cognome     | Id Github          | componente   | sezione                         |
+|----------- | ----------- | ------------------ | ------------ | ------------------------------- |
+| Nicolas    | Baratella   | @Nicobara08        |Semafori     | Server                          |
+| Giacomo    | Modenasi    | @Jack_00           |Semafori     | Hardware                        |
+| Alessio    | Monesi      | @Monesi-Alessio    |Semafori     | Software Desing & Documentation |
+| Gabriel    | Neagu       | ??????????????     |Semafori     | User Intefrace & User Expirence |
+| Nicholas   | Bassi       | @nicholasbassi04   |Fotovoltaici | Hardware                        |
+| Andrea     | Bianchini   | @BianchiniAndrea   |Fotovoltaici | Server                          |
+| Alessandro | Marcheselli | @Alessandro190320  |Fotovoltaici | User Intefrace & User Expirence |
+| Denny      | Pirani      | @Denny0906         |Fotovoltaici | Software Desing & Documentation |
+| Brian      | Bushi       | @brianBushi        |Insegna      | User Intefrace & User Expirence |
+| Lorenzo    | Ghirotto    | @Ghiruz03Lollo     |Insegna      | Server                          |
+| Alexia     | Mantovani   | @Alexia1721        |Insegna      | Hardware                        |
+| David      | Zhu         | @Tepag             |Insegna      | Software Desing & Documentation |
+| Alessandro | Furci       | @AlessandroFurci12 |Canale       | Server                          |
+| Marco      | Gandolfi    | @mGand04           |Canale       | Hardware                        |
+| Alessandro | Mantovani   | @XxAleMantoxX      |Canale       | Software Desing & Documentation |
+| Jiaxiang   | Xu          | @JiaxiangXu12      |Canale       | User Intefrace & UserExpirence  |
 
 
