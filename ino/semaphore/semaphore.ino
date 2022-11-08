@@ -22,13 +22,25 @@ void loop()
     if (lettura != BotStato and lettura == HIGH) // se viene rillevata una variazione
     {
         // ciclo semaforo acceso
-        digitalWrite(Rosso, HIGH);
         digitalWrite(Verde, HIGH);
+        delay(4000);
+        digitalWrite(Verde, LOW);
         digitalWrite(Giallo, HIGH);
+        delay(1000);
+        digitalWrite(Giallo, LOW);
+        digitalWrite(Rosso, HIGH);
+        delay(4000);
+        digitalWrite(Rosso, LOW);
     }
     else
     {
         // lampeggio giallo ( spento )
+        digitalWrite(Verde, LOW);
+        digitalWrite(Rosso, LOW);
+        digitalWrite(Giallo, HIGH);
+        delay(500); // ritardo
+        digitalWrite(Giallo, LOW);
+        delay(500); // ritardo
     }
 
     BotStato = lettura; // aggiorno lo stato del bottone
