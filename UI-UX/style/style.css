@@ -10,22 +10,24 @@ body {
 }
 
 .box {
-    height: 300px;
+    height: 270px;
     width: 500px;
     background: #fff;
-    opacity: 0.75;
+    opacity: 0.80;
     border-color: #fff;
     border-width: 5px;
     border-radius: 40px;
 }
 
-
+.form-control {
+    border: 2px solid #000 !important;
+}
 
 /*Btn 0*/
 
 .btn-on-0 {
-    width: 60px;
-    height: 25px;
+    width: 67px;
+    height: 28px;
     margin: 0 3px;
     border-radius: 25px;
     font-size: 14px;
@@ -60,8 +62,8 @@ body {
 
 /*Btn 1 */
 .btn-on-1 {
-    width: 60px;
-    height: 25px;
+    width: 67px;
+    height: 28px;
     margin: 0 3px;
     border-radius: 25px;
     font-size: 14px;
@@ -96,8 +98,8 @@ body {
 
 /*Btn 2 */
 .btn-on-2 {
-    width: 60px;
-    height: 25px;
+    width: 67px;
+    height: 28px;
     margin: 0 3px;
     border-radius: 25px;
     font-size: 14px;
@@ -132,8 +134,8 @@ body {
 
 /*Btn 3 */
 .btn-on-3 {
-    width: 60px;
-    height: 25px;
+    width: 67px;
+    height: 28px;
     margin: 0 3px;
     border-radius: 25px;
     font-size: 14px;
@@ -168,8 +170,8 @@ body {
 
 /*Btn 4 */
 .btn-on-4 {
-    width: 60px;
-    height: 25px;
+    width: 67px;
+    height: 28px;
     margin: 0 3px;
     border-radius: 25px;
     font-size: 14px;
