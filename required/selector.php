@@ -1,36 +1,71 @@
 <?php
     // all these are the cases to load site or data from database
 
-    //! ------------------------------------------------------------------------------------------------------------
-    if(isset($_GET["led_status"])) {
-
+    if(isset($_GET["semaphore_status"])) {
         $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
-        $sql = "SELECT * FROM arduino";    // creazione della query
+        $sql = "SELECT OnOff FROM arduino WHERE Descr = \"semaphore\"";    // creazione della query
 
         $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
 
         // i do throught my rs until I found the Id that I want, and print the information
-        while($record = $rs->fetch_assoc()){
-            if ($record['descr']== "led"){  //change Id for your use
-                echo($record['OnOff']); //which information of the row you want, in this case on off <- you cna found the default table on github
-                break;
-            }
-        }
+        $record =$rs->fetch_assoc();
+        echo($record["OnOff"]);
 
         $db->close();   // chiudo la mia connessione
     }
-    //! ------------------------------------------------------------------------------------------------------------
 
-	elseif(isset($_GET["cambiastatociaociaosonocoglione"])){
-		echo("Sono Speciale");
-	}
+    elseif(isset($_GET["oled_status"])) {
+        $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
+        $sql = "SELECT OnOff FROM arduino WHERE Descr = \"oled\"";    // creazione della query
 
-    // -------------------------------------- //
-    // IF NO VARIABLES  -> load normally below//
-    // -------------------------------------- //
-    else{
-        // load site
+        $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
+
+        // i do throught my rs until I found the Id that I want, and print the information
+        $record =$rs->fetch_assoc();
+        echo($record["OnOff"]);
+
+        $db->close();   // chiudo la mia connessione
     }
+
+    elseif(isset($_GET["oled_string"])) {
+        $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
+        $sql = "SELECT String FROM arduino WHERE Descr = \"oled\"";    // creazione della query
+
+        $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
+
+        // i do throught my rs until I found the Id that I want, and print the information
+        $record =$rs->fetch_assoc();
+        echo($record["String"]);
+
+        $db->close();   // chiudo la mia connessione
+    }
+
+    elseif(isset($_GET["pump_status"])) {
+        $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
+        $sql = "SELECT OnOff FROM arduino WHERE Descr = \"pump\"";    // creazione della query
+
+        $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
+
+        // i do throught my rs until I found the Id that I want, and print the information
+        $record =$rs->fetch_assoc();
+        echo($record["OnOff"]);
+
+        $db->close();   // chiudo la mia connessione
+    }
+
+    elseif(isset($_GET["solarPanel_status"])) {
+        $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
+        $sql = "SELECT OnOff FROM arduino WHERE Descr = \"solarPanel\"";    // creazione della query
+
+        $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
+
+        // i do throught my rs until I found the Id that I want, and print the information
+        $record =$rs->fetch_assoc();
+        echo($record["OnOff"]);
+
+        $db->close();   // chiudo la mia connessione
+    }
+
 
 
 ?>
