@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Progetto arduino</title>
+    <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
 </head>
 
 <body>
@@ -212,7 +213,7 @@
                                 <div class="col-sm-2 col-xl-3">
                                     <h4 style="color:white">VALORE ATTUALE</h4>
                                 </div>-->
-
+                            
                             <div class="progess">
                                 <div class="col-sm-0 col-xl-11" style="padding-left: 8%;">
                                     <div class="progress-bar" role="progressbar" aria-label="Example with label"
@@ -222,8 +223,17 @@
                                         <button onclick="dynamicBar(300)"> prova</button> --> 
                                 </div>
                             </div>
-                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                               
+                            
+                            
+                                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                                    $db = new mysqli("localhost", "root", "", "scuola2223");
+                                    $sql = "UPDATE arduino SET OnOff = 'Off' WHERE descr='0'";
+                                    $rs = $db->query($sql);
+
+                                    $db->close();
+                                    
+                                </form>
+                                    
 
                             <!--<div class="col-sm-4 col-xl-4">
                                         <label for="" class="visually-hidden" title="prova"></label>
