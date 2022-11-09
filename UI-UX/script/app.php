@@ -1,8 +1,30 @@
-// Btn 0 
+// ------------------------------------------------------------------------ //
+// Ho commentato tutte le chiamate alle funzioni del bottone in modo che    //
+// ogni volta che si aggiorna lo stato non venga mandato a False di default //
+// ------------------------------------------------------------------------ //
+
+// Btn 0
 function on_off_0(type) {
     var btn = document.getElementsByClassName("btn-on-0")[0];
     var circle = document.getElementsByClassName("btn-on-circle-0")[0];
     var text = document.getElementsByClassName("btn-on-text-0")[0];
+
+    <?php
+        $db = new mysqli("localhost", "root", "", "scuola2223");
+
+        $sql = "SELECT OnOff FROM arduino WHERE descr='0'";
+        $rs = $db->query($sql);
+        $record = $rs->fetch_assoc();
+        $readed = $record['OnOff'];
+        if (strcmp($readed, "On")==0){
+            $sql = "UPDATE arduino SET OnOff = 'Off' WHERE descr='0'";
+        }
+        else{
+            $sql = "UPDATE arduino SET OnOff = 'On' WHERE descr='0'";
+        }
+        $db->query($sql);
+        $db->close();
+    ?>
 
     if (!type) {
         btn.style = "background-color: red;"
@@ -18,9 +40,27 @@ function on_off_0(type) {
     }
     btn.setAttribute("onclick", "on_off_0(" + !type + ")");
 }
-on_off_0(false)
+/*
+<?php
+    $db = new mysqli("localhost", "root", "", "scuola2223");
+    $sql = "SELECT OnOff FROM arduino WHERE descr='0'";
+    $rs = $db->query($sql);
+    $record = $rs->fetch_assoc();
+    $readed = $record['OnOff'];
+    if (strcmp($readed, "On")==0){
+            echo("on_off_0(false)");
+        }
+        else{
+            if (strcmp($readed, "Off")==0){
+                echo("on_off_0(true)");
+            }
+        }
+    $db->close();
+?>
+*/
 
-// Btn 1 
+
+// Btn 1
 
 function on_off_1(type) {
     var btn = document.getElementsByClassName("btn-on-1")[0];
@@ -41,7 +81,7 @@ function on_off_1(type) {
     }
     btn.setAttribute("onclick", "on_off_1(" + !type + ")");
 }
-on_off_1(false)
+//on_off_1(false)
 
 // Btn 2
 
@@ -64,7 +104,7 @@ function on_off_2(type) {
     }
     btn.setAttribute("onclick", "on_off_2(" + !type + ")");
 }
-on_off_2(false)
+//on_off_2(false)
 
 // Btn 3
 
@@ -87,7 +127,7 @@ function on_off_3(type) {
     }
     btn.setAttribute("onclick", "on_off_3(" + !type + ")");
 }
-on_off_3(false)
+//on_off_3(false)
 
 
 // Btn 4
@@ -111,7 +151,7 @@ function on_off_4(type) {
     }
     btn.setAttribute("onclick", "on_off_4(" + !type + ")");
 }
-on_off_4(false)
+//on_off_4(false)
 
 // Btn 5
 
@@ -134,20 +174,22 @@ function on_off_5(type) {
     }
     btn.setAttribute("onclick", "on_off_5(" + !type + ")");
 }
-on_off_5(false)
+//on_off_5(false)
 
-// funzione barra 
+// funzione barra
+/*
 function dynamicBar(value) {
 
     var bar = document.getElementsByClassName("progress-bar");
 
-    console.log(value);
-    percent = (value * 100) / 400; // calcolo la percentuale 
+    //console.log(value);
+    percent = (value * 100) / 400; // calcolo la percentuale
 
-    str = "width: " + String(percent) + "%;";
+    // circle.style = "left: 40px;background-color: white;box-shadow: 0 0 10px #888;";
+
+    //str = "width: " + percent.toString() + "%;";
     str1 = "aria-valuenow: " + String(percent) + ";";
 
-    bar.style.setAttribute("style", str + str1);
-
-
-}
+    //bar.style.width = "12%";
+    bar.style.width = percent.toString() + "%";
+}*/
