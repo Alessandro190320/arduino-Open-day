@@ -10,7 +10,7 @@
 | Nicolas    | Baratella   | @Nicobara08        |Semafori     | Server                          |
 | Giacomo    | Modenasi    | @Jack_00           |Semafori     | Hardware                        |
 | Alessio    | Monesi      | @Monesi-Alessio    |Semafori     | Software Desing & Documentation |
-| Gabriel    | Neagu       | ??????????????     |Semafori     | User Intefrace & User Expirence |
+| Gabriel    | Neagu       | @GabrielNeagu11    |Semafori     | User Intefrace & User Expirence |
 | Nicholas   | Bassi       | @nicholasbassi04   |Fotovoltaici | Hardware                        |
 | Andrea     | Bianchini   | @BianchiniAndrea   |Fotovoltaici | Server                          |
 | Alessandro | Marcheselli | @Alessandro190320  |Fotovoltaici | User Intefrace & User Expirence |
