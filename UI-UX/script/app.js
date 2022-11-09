@@ -112,3 +112,42 @@ function on_off_4(type) {
     btn.setAttribute("onclick", "on_off_4(" + !type + ")");
 }
 on_off_4(false)
+
+// Btn 5
+
+function on_off_5(type) {
+    var btn = document.getElementsByClassName("btn-on-5")[0];
+    var circle = document.getElementsByClassName("btn-on-circle-5")[0];
+    var text = document.getElementsByClassName("btn-on-text-5")[0];
+
+    if (!type) {
+        btn.style = "background-color: red;"
+        circle.style = "left: 40px;background-color: white;box-shadow: 0 0 10px #888;";
+        text.style = "right: 30px;color: white;";
+        text.innerText = "OFF";
+    }
+    else {
+        btn.style = "";
+        circle.style = "";
+        text.style = "";
+        text.innerText = "ON";
+    }
+    btn.setAttribute("onclick", "on_off_5(" + !type + ")");
+}
+on_off_5(false)
+
+// funzione barra 
+function dynamicBar(value) {
+
+    var bar = document.getElementsByClassName("progress-bar");
+
+    console.log(value);
+    percent = (value * 100) / 400; // calcolo la percentuale 
+
+    str = "width: " + String(percent) + "%;";
+    str1 = "aria-valuenow: " + String(percent) + ";";
+
+    bar.style.setAttribute("style", str + str1);
+
+
+}

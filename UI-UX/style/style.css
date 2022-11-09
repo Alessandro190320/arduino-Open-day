@@ -1,6 +1,17 @@
 body {
     background: url(../image/smartcity3.jpg) !important;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    background-attachment: fixed;
+}
+
+.backgd {
+    /*background: url(../image/smartcity3.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    background-attachment: fixed;
 }
 
 .titolo {
@@ -10,27 +21,35 @@ body {
 }
 
 .box {
-    height: 270px;
+    height: 200px;
     width: 500px;
-    background: #fff;
-    opacity: 0.80;
+    background: #123;
+    opacity: 0.75;
     border-color: #fff;
     border-width: 5px;
     border-radius: 40px;
 }
 
-.form-control {
-    border: 2px solid #000 !important;
+.box2 {
+    height: 200px;
+    width: 1170px;
+    background: #123;
+    opacity: 0.75;
+    border-color: #fff;
+    border-width: 5px;
+    border-radius: 40px;
 }
+
+
 
 /*Btn 0*/
 
 .btn-on-0 {
-    width: 67px;
-    height: 28px;
+    width: 60px;
+    height: 25px;
     margin: 0 3px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .btn-on-0 {
@@ -62,11 +81,11 @@ body {
 
 /*Btn 1 */
 .btn-on-1 {
-    width: 67px;
-    height: 28px;
+    width: 60px;
+    height: 25px;
     margin: 0 3px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .btn-on-1 {
@@ -98,11 +117,11 @@ body {
 
 /*Btn 2 */
 .btn-on-2 {
-    width: 67px;
-    height: 28px;
+    width: 60px;
+    height: 25px;
     margin: 0 3px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .btn-on-2 {
@@ -134,11 +153,11 @@ body {
 
 /*Btn 3 */
 .btn-on-3 {
-    width: 67px;
-    height: 28px;
+    width: 60px;
+    height: 25px;
     margin: 0 3px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .btn-on-3 {
@@ -170,11 +189,11 @@ body {
 
 /*Btn 4 */
 .btn-on-4 {
-    width: 67px;
-    height: 28px;
+    width: 60px;
+    height: 25px;
     margin: 0 3px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .btn-on-4 {
@@ -197,6 +216,42 @@ body {
 }
 
 .btn-on-text-4 {
+    position: absolute;
+    right: 10px;
+    line-height: 25px;
+    color: white;
+    transition: all .5s;
+}
+
+/*Btn 5 */
+.btn-on-5 {
+    width: 60px;
+    height: 25px;
+    margin: 0 3px;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+.btn-on-5 {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid white;
+    background-color: green;
+}
+
+.btn-on-circle-5 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    transition: all .5s;
+}
+
+.btn-on-text-5 {
     position: absolute;
     right: 10px;
     line-height: 25px;
