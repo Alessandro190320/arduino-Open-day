@@ -1,6 +1,9 @@
 <!DOCTYPE html5>
 <html>
-
+<?php
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "20";
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,10 +33,13 @@
                                 <div class="col-sm-3 col-xl-3">
                                 </div>
                                 <div class="col-sm-3 col-xl-3">
-                                    <p class="btn-on-0" onclick="on_off_0()">
-                                        <span class="btn-on-circle-0"></span>
-                                        <span class="btn-on-text-0">ON</span>
-                                    </p>
+                                    <form action="index.php" method="post" >
+                                        <p class="btn-on-0" onclick="on_off_0()" name="someAction">
+                                            <span class="btn-on-circle-0" name="someAction"></span>
+                                            <span class="btn-on-text-0" name="someAction">ON</span>
+                                        </p>
+                                    </form>
+
                                 </div>
                                 <div class="col-sm-3 col-xl-3">
                                     <h4 style="color:white">SEMAFORO</h4>
@@ -60,6 +66,7 @@
                                         <span class="btn-on-circle-1"></span>
                                         <span class="btn-on-text-1">ON</span>
                                     </p>
+
                                 </div>
                                 <div class="col-sm-3 col-xl-3">
                                     <h4 style="color:white">CASA 1</h4>
@@ -213,28 +220,53 @@
                                 <div class="col-sm-2 col-xl-3">
                                     <h4 style="color:white">VALORE ATTUALE</h4>
                                 </div>-->
-                            
-                            <div class="progess">
-                                <div class="col-sm-0 col-xl-11" style="padding-left: 8%;">
-                                    <div class="progress-bar" role="progressbar" aria-label="Example with label"
-                                        style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                        100%</div>
-                                    <!-- Bottone di prova per provare js 
-                                        <button onclick="dynamicBar(300)"> prova</button> --> 
-                                </div>
-                            </div>
-                            
-                            
-                                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                                    $db = new mysqli("localhost", "root", "", "scuola2223");
-                                    $sql = "UPDATE arduino SET OnOff = 'Off' WHERE descr='0'";
-                                    $rs = $db->query($sql);
 
-                                    $db->close();
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                                    <?php
+                                        $db = new mysqli("localhost", "root", "", "scuola2223");
+                                        $sql = "SELECT String FROM arduino WHERE descr='solarPanel'";
+                                        $rs = $db->query($sql);
 
+                                        $record = $rs->fetch_assoc();
+                                        
+                                        // -----------------
+
+                                        
+                                        // ------------------
+                                        //intval( $string )
+                                        echo("
+                                                <div class=\"col-sm-0 col-xl-11\" style=\"padding-left: 8%;\">
+                                                    <div class=\"progress-bar progress-bar-striped\" style=\"min-width: 20px;\"> </div>
+                                                    <!--<button onclick=\"dynamicBar(
+                                        ");
+                                        $newPercentage =intval($record['String'])*100/400;
+                                        //echo($newPercentage);
+                                        echo(")\"> prova</button>-->
+                                                </div>
+                                            
+                                        ");
+
+                                        echo("
+                                            <script>
+                                                var i = 0;
+                                                var bar = document.querySelector(\".progress-bar\");
+                                                function makeProgress(){
+                                                    if(i < $newPercentage){
+                                                        i = i + 1;
+                                                        bar.style.width = i + \"%\";
+                                                        bar.innerText = \"⚡ \" + i + \"% ⚡\"  ;
+                                                    }
+
+                                                    // Wait for sometime before running this script again
+                                                    setTimeout(\"makeProgress()\", $newPercentage);
+                                                }
+                                                makeProgress();
+                                            </script>
+                                        ");
+
+                                        $db->close();
+                                    ?>
                                 </form>
-                                    
-
                             <!--<div class="col-sm-4 col-xl-4">
                                         <label for="" class="visually-hidden" title="prova"></label>
                                         <input type="text" class="form-control" id="" placeholder=" ">
@@ -259,7 +291,9 @@
     </div>
     </div>
     <!-- SCRIPT-->
-    <script src="./script/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script/app.php"></script>
+    
     </div>
 
 </body>
