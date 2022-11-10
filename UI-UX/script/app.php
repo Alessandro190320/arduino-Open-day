@@ -2,7 +2,10 @@
 // Ho commentato tutte le chiamate alle funzioni del bottone in modo che    //
 // ogni volta che si aggiorna lo stato non venga mandato a False di default //
 // ------------------------------------------------------------------------ //
-
+ 
+<?php
+    $campo = "0";   //--> Da cambiare, per la riga da leggere.
+?>
 // Btn 0
 function on_off_0(type) {
     var btn = document.getElementsByClassName("btn-on-0")[0];
@@ -12,15 +15,15 @@ function on_off_0(type) {
     <?php
         $db = new mysqli("localhost", "root", "", "scuola2223");
 
-        $sql = "SELECT OnOff FROM arduino WHERE descr='0'";
+        $sql = "SELECT OnOff FROM arduino WHERE descr=$campo";
         $rs = $db->query($sql);
         $record = $rs->fetch_assoc();
         $readed = $record['OnOff'];
         if (strcmp($readed, "On")==0){
-            $sql = "UPDATE arduino SET OnOff = 'Off' WHERE descr='0'";
+            $sql = "UPDATE arduino SET OnOff = 'Off' WHERE descr=$campo";
         }
         else{
-            $sql = "UPDATE arduino SET OnOff = 'On' WHERE descr='0'";
+            $sql = "UPDATE arduino SET OnOff = 'On' WHERE descr=$campo";
         }
         $db->query($sql);
         $db->close();
@@ -42,8 +45,9 @@ function on_off_0(type) {
 }
 /*
 <?php
+    //$campo = "0";   //--> Da cambiare, per la riga da leggere.
     $db = new mysqli("localhost", "root", "", "scuola2223");
-    $sql = "SELECT OnOff FROM arduino WHERE descr='0'";
+    $sql = "SELECT OnOff FROM arduino WHERE descr=$campo";
     $rs = $db->query($sql);
     $record = $rs->fetch_assoc();
     $readed = $record['OnOff'];
