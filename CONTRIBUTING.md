@@ -1,5 +1,7 @@
 5^I galileo galilei Ostiglia (MN) anno 2022/23 
 
+| Nome       | Cognome     | Id Github          | Componente  | Sezione                         |
+|----------- | ----------- | ------------------ | ----------- | ------------------------------- |
 | Nicolas    | Baratella   | @Nicobara08        |Semafori     | Server                          |
 | Giacomo    | Modenasi    | @Jack_00           |Semafori     | Hardware                        |
 | Alessio    | Monesi      | @Monesi-Alessio    |Semafori     | Software Desing & Documentation |
@@ -15,4 +17,4 @@
 | Alessandro | Furci       | @AlessandroFurci12 |Canale       | Server                          |
 | Marco      | Gandolfi    | @mGand04           |Canale       | Hardware                        |
 | Alessandro | Mantovani   | @XxAleMantoxX      |Canale       | Software Desing & Documentation |
-| Jiaxiang   | Xu          | @JiaxiangXu12 
+| Jiaxiang   | Xu          | @JiaxiangXu12      |Canale       | User Intefrace & UserExpirence  |
