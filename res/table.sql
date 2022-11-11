@@ -10,5 +10,13 @@ CREATE TABLE arduino(
 
 -- codice per inserire componente nella tabella creata
 INSERT INTO arduino(Id, Descr, OnOff, String)
-VALUES(0, 0, 'On', ""); -- example of a led 
+VALUES(1, "pump", 'On', ""); -- example of a led 
 
+INSERT INTO arduino(Id, Descr, OnOff, String)
+VALUES(2, "semaphore", 'On', ""); -- example of a led 
+
+INSERT INTO arduino(Id, Descr, OnOff, String)
+VALUES(3, "solarPanel", 'On', "300"); -- example of a led 
+
+INSERT INTO arduino(Id, Descr, OnOff, String)
+VALUES(4, "oled", 'On', "sono sul oled"); -- example of a led 
