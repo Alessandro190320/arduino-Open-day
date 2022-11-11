@@ -69,13 +69,37 @@
      elseif(isset($_GET["solarPanel_string"])) {
         $value = $_GET["solarPanel_string"];
         $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
-        $sql = "UPDATE arduino SET String = " + $value + " WHERE Descr = \"solarPanel\"";    // creazione della query
+        $sql = "UPDATE arduino SET String = $value WHERE Descr = \"solarPanel\"";    // creazione della query
 
         $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
 
         $db->close();   // chiudo la mia connessione
     }
+    
+    elseif(isset($_GET["led1_status"])) {
+        $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
+        $sql = "SELECT OnOff FROM arduino WHERE Descr = \"led1\"";    // creazione della query
 
+        $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
 
+        // i do throught my rs until I found the Id that I want, and print the information
+        $record =$rs->fetch_assoc();
+        echo($record["OnOff"]);
+
+        $db->close();   // chiudo la mia connessione
+    }
+    
+    elseif(isset($_GET["sled2_status"])) {
+        $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
+        $sql = "SELECT OnOff FROM arduino WHERE Descr = \"led2\"";    // creazione della query
+
+        $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
+
+        // i do throught my rs until I found the Id that I want, and print the information
+        $record =$rs->fetch_assoc();
+        echo($record["OnOff"]);
+
+        $db->close();   // chiudo la mia connessione
+    }
 
 ?>
