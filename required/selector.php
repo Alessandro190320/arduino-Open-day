@@ -89,7 +89,7 @@
         $db->close();   // chiudo la mia connessione
     }
     
-    elseif(isset($_GET["sled2_status"])) {
+    elseif(isset($_GET["led2_status"])) {
         $db = new mysqli("localhost","root","","scuola2223");   // creazione collegamento con il mio database
         $sql = "SELECT OnOff FROM arduino WHERE Descr = \"led2\"";    // creazione della query
 
