@@ -320,7 +320,7 @@ void loop() {
 // -------------------------------------------------------FUNCTIONS------------------------------------------------------- //
 String retrieveFromDatabase(String request) {
   int err = 0;
-  String readedString;
+  String readString;
   String kPath = "/arduino-Open-day/required/selector.php";
   kPath = kPath + request;
 
@@ -338,16 +338,16 @@ String retrieveFromDatabase(String request) {
       // Now we've got to the body, so we can print it out
       unsigned long timeoutStart = millis();
 
-      char readedChar = ' ';
+      char readChar = ' ';
       while ((http.connected() || http.available()) && ((millis() - timeoutStart) < kNetworkTimeout) )
       {
         if (http.available())
         {
           // Print out this character
-          readedChar = http.read();
+          readChar = http.read();
 
-          readedString = readedString + readedChar;
-          //Serial.print(readedChar);
+          readString = readString + readChar;
+          //Serial.print(readChar);
 
           // from char to string
 
@@ -378,5 +378,5 @@ String retrieveFromDatabase(String request) {
   http.stop();
   c.stop();
 
-  return readedString;
+  return readString;
 }
