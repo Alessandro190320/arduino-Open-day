@@ -24,4 +24,4 @@
 | Alessandro | Mantovani   | @XxAleMantoxX      |Canale       | Software Desing & Documentation |
 | Jiaxiang   | Xu          | @JiaxiangXu12      |Canale       | User Intefrace & UserExpirence  |
 
-
+link presentazione: https://docs.google.com/presentation/d/1CJ0pqDPmb2Liix2FEXWle6ZqFXoZeh34q5T7IfTxwA0/edit?usp=sharing
