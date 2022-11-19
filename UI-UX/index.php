@@ -16,9 +16,8 @@ $sec = "6000000000000000000000000000000";
     <meta http-equiv="refresh" content="<?php echo $sec ?>;URL='<?php echo $page ?>'">
 </head>
 
+<!--TODO: test di todo -->
 <body>
-
-
 
     <div class="backgd">
 
