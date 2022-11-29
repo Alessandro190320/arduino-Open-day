@@ -2,8 +2,8 @@
 <html>
 
 <?php
-$page = $_SERVER['PHP_SELF'];
-$sec = "6000000000000000000000000000000";
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "1000000000000000000000000000000";
 ?>
 
 <head>
@@ -16,22 +16,19 @@ $sec = "6000000000000000000000000000000";
     <meta http-equiv="refresh" content="<?php echo $sec ?>;URL='<?php echo $page ?>'">
 </head>
 
+<!--TODO: test di todo -->
 <body>
-
-
 
     <div class="backgd">
 
-
-
-        <div class="container text-center">
-            <div class="container text-center">
+        <div class="container">
+            <div class="container">
                 <div class="col-md-12">
                     <h1 class="titolo">SMARTCITY</h1>
                 </div>
             </div>
 
-            <div class="container text-center">
+            <div class="container">
                 <div class="row" style="padding-top: 5%;">
                     <div class="col-sm-6 col-xl-6">
                         <div class="box">
@@ -46,19 +43,19 @@ $sec = "6000000000000000000000000000000";
                                     $readed = $record['OnOff'];
                                     if (strcmp($readed, "Off") == 0) {
                                         echo ("
-                                                        <p class=\"btn-on-0\" style=\"background-color: red;\" onclick=\"on_off_0(true)\">
-                                                            <span class=\"btn-on-circle-0\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
-                                                            <span class=\"btn-on-text-0\" style=\"right: 30px;color: white;\">OFF</span>
-                                                        </p>
-                                                    ");
+                                            <p class=\"btn-on-0\" style=\"background-color: red;\" onclick=\"on_off_0(true)\">
+                                                <span class=\"btn-on-circle-0\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
+                                                <span class=\"btn-on-text-0\" style=\"right: 30px;color: white;\">OFF</span>
+                                            </p>
+                                        ");
                                     } else {
                                         if (strcmp($readed, "On") == 0) {
                                             echo ("
-                                                            <p class=\"btn-on-0\" onclick=\"on_off_0(false)\">
-                                                                <span class=\"btn-on-circle-0\"></span>
-                                                                <span class=\"btn-on-text-0\">ON</span>
-                                                            </p>
-                                                        ");
+                                                <p class=\"btn-on-0\" onclick=\"on_off_0(false)\">
+                                                    <span class=\"btn-on-circle-0\"></span>
+                                                    <span class=\"btn-on-text-0\">ON</span>
+                                                </p>
+                                            ");
                                         }
                                     }
                                     $db->close();
@@ -84,19 +81,19 @@ $sec = "6000000000000000000000000000000";
                                     $readed = $record['OnOff'];
                                     if (strcmp($readed, "Off") == 0) {
                                         echo ("
-                                                        <p class=\"btn-on-1\" style=\"background-color: red;\" onclick=\"on_off_1(true)\">
-                                                            <span class=\"btn-on-circle-1\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
-                                                            <span class=\"btn-on-text-1\" style=\"right: 30px;color: white;\">OFF</span>
-                                                        </p>
-                                                    ");
+                                            <p class=\"btn-on-1\" style=\"background-color: red;\" onclick=\"on_off_1(true)\">
+                                                <span class=\"btn-on-circle-1\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
+                                                <span class=\"btn-on-text-1\" style=\"right: 30px;color: white;\">OFF</span>
+                                            </p>
+                                        ");
                                     } else {
                                         if (strcmp($readed, "On") == 0) {
                                             echo ("
-                                                            <p class=\"btn-on-1\" onclick=\"on_off_1(false)\">
-                                                                <span class=\"btn-on-circle-1\"></span>
-                                                                <span class=\"btn-on-text-1\">ON</span>
-                                                            </p>
-                                                        ");
+                                                <p class=\"btn-on-1\" onclick=\"on_off_1(false)\">
+                                                    <span class=\"btn-on-circle-1\"></span>
+                                                    <span class=\"btn-on-text-1\">ON</span>
+                                                </p>
+                                            ");
                                         }
                                     }
                                     $db->close();
@@ -118,19 +115,19 @@ $sec = "6000000000000000000000000000000";
                                     $readed = $record['OnOff'];
                                     if (strcmp($readed, "Off") == 0) {
                                         echo ("
-                                                        <p class=\"btn-on-2\" style=\"background-color: red;\" onclick=\"on_off_2(true)\">
-                                                            <span class=\"btn-on-circle-2\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
-                                                            <span class=\"btn-on-text-2\" style=\"right: 30px;color: white;\">OFF</span>
-                                                        </p>
-                                                    ");
+                                            <p class=\"btn-on-2\" style=\"background-color: red;\" onclick=\"on_off_2(true)\">
+                                                <span class=\"btn-on-circle-2\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
+                                                <span class=\"btn-on-text-2\" style=\"right: 30px;color: white;\">OFF</span>
+                                            </p>
+                                        ");
                                     } else {
                                         if (strcmp($readed, "On") == 0) {
                                             echo ("
-                                                            <p class=\"btn-on-2\" onclick=\"on_off_2(false)\">
-                                                                <span class=\"btn-on-circle-2\"></span>
-                                                                <span class=\"btn-on-text-2\">ON</span>
-                                                            </p>
-                                                        ");
+                                                <p class=\"btn-on-2\" onclick=\"on_off_2(false)\">
+                                                    <span class=\"btn-on-circle-2\"></span>
+                                                    <span class=\"btn-on-text-2\">ON</span>
+                                                </p>
+                                            ");
                                         }
                                     }
                                     $db->close();
@@ -161,19 +158,19 @@ $sec = "6000000000000000000000000000000";
                                     $readed = $record['OnOff'];
                                     if (strcmp($readed, "Off") == 0) {
                                         echo ("
-                                                        <p class=\"btn-on-3\" style=\"background-color: red;\" onclick=\"on_off_3(true)\">
-                                                            <span class=\"btn-on-circle-3\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
-                                                            <span class=\"btn-on-text-3\" style=\"right: 30px;color: white;\">OFF</span>
-                                                        </p>
-                                                    ");
+                                            <p class=\"btn-on-3\" style=\"background-color: red;\" onclick=\"on_off_3(true)\">
+                                                <span class=\"btn-on-circle-3\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
+                                                <span class=\"btn-on-text-3\" style=\"right: 30px;color: white;\">OFF</span>
+                                            </p>
+                                        ");
                                     } else {
                                         if (strcmp($readed, "On") == 0) {
                                             echo ("
-                                                            <p class=\"btn-on-3\" onclick=\"on_off_3(false)\">
-                                                                <span class=\"btn-on-circle-3\"></span>
-                                                                <span class=\"btn-on-text-3\">ON</span>
-                                                            </p>
-                                                        ");
+                                                <p class=\"btn-on-3\" onclick=\"on_off_3(false)\">
+                                                    <span class=\"btn-on-circle-3\"></span>
+                                                    <span class=\"btn-on-text-3\">ON</span>
+                                                </p>
+                                            ");
                                         }
                                     }
                                     $db->close();
@@ -272,19 +269,19 @@ $sec = "6000000000000000000000000000000";
                                 $readed = $record['OnOff'];
                                 if (strcmp($readed, "Off") == 0) {
                                     echo ("
-                                                    <p class=\"btn-on-5\" style=\"background-color: red;\" onclick=\"on_off_5(true)\">
-                                                        <span class=\"btn-on-circle-5\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
-                                                        <span class=\"btn-on-text-5\" style=\"right: 30px;color: white;\">OFF</span>
-                                                    </p>
-                                                ");
+                                        <p class=\"btn-on-5\" style=\"background-color: red;\" onclick=\"on_off_5(true)\">
+                                            <span class=\"btn-on-circle-5\" style=\"left: 40px;background-color: white;box-shadow: 0 0 10px #888;\"></span>
+                                            <span class=\"btn-on-text-5\" style=\"right: 30px;color: white;\">OFF</span>
+                                        </p>
+                                    ");
                                 } else {
                                     if (strcmp($readed, "On") == 0) {
                                         echo ("
-                                                        <p class=\"btn-on-5\" onclick=\"on_off_5(false)\">
-                                                            <span class=\"btn-on-circle-5\"></span>
-                                                            <span class=\"btn-on-text-5\">ON</span>
-                                                        </p>
-                                                    ");
+                                            <p class=\"btn-on-5\" onclick=\"on_off_5(false)\">
+                                                <span class=\"btn-on-circle-5\"></span>
+                                                <span class=\"btn-on-text-5\">ON</span>
+                                            </p>
+                                        ");
                                     }
                                 }
                                 $db->close();

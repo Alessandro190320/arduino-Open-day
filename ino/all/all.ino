@@ -95,7 +95,7 @@ void setup() {
     while (true)
       ;
   }
-  delay(2000);
+  //delay(2000);
   display.clearDisplay();
   display.display();
 
@@ -110,7 +110,7 @@ void setup() {
   //display.drawLine(0, 0, 100, 50, WHITE);
   // La mando in stampa
   display.display();
-  delay(2000);
+  //delay(2000);
   yi = 0;
   yf = 63;
   dy = 1;
@@ -151,7 +151,7 @@ void loop() {
     strToShow = retrieveFromDatabase("?oled_string");
     display.println(strToShow);
     display.display();
-    delay(2000);
+    //delay(2000);
   }
   else {
     if (returnedStr == "Off") {
@@ -162,7 +162,7 @@ void loop() {
       display.setCursor(0, 0);
       display.println("disactived");
       display.display();
-      delay(2000);
+      //delay(2000);
     }
   }
   //*/
@@ -180,7 +180,7 @@ void loop() {
       digitalWrite(pinLed1, LOW);
     }
   }
-  delay(2000);//*/
+  //delay(2000);//*/
 
   // led2
     returnedStr = retrieveFromDatabase("?led2_status");
@@ -194,7 +194,7 @@ void loop() {
       digitalWrite(pinLed2,LOW);
     }
     }
-    delay(2000);//*/
+    //delay(2000);//*/
 
   // Pump
   returnedStr = retrieveFromDatabase("?pump_status");
@@ -208,7 +208,7 @@ void loop() {
       digitalWrite(pinRelay, LOW);
     }
   }
-  delay(2000);//*/
+  //delay(2000);//*/
 
   // semaphore - send to the second Arduino
   returnedStr = retrieveFromDatabase("?semaphore_status");
@@ -253,7 +253,7 @@ void loop() {
     }//*/
 
   // solarPanel
-  delay(2000);
+  //delay(2000);
   returnedStr = retrieveFromDatabase("?solarPanel_status");
   if (returnedStr == "On") {
     Serial.println("solarPanel On");
@@ -320,7 +320,7 @@ void loop() {
 // -------------------------------------------------------FUNCTIONS------------------------------------------------------- //
 String retrieveFromDatabase(String request) {
   int err = 0;
-  String readedString;
+  String readString;
   String kPath = "/arduino-Open-day/required/selector.php";
   kPath = kPath + request;
 
@@ -338,16 +338,16 @@ String retrieveFromDatabase(String request) {
       // Now we've got to the body, so we can print it out
       unsigned long timeoutStart = millis();
 
-      char readedChar = ' ';
+      char readChar = ' ';
       while ((http.connected() || http.available()) && ((millis() - timeoutStart) < kNetworkTimeout) )
       {
         if (http.available())
         {
           // Print out this character
-          readedChar = http.read();
+          readChar = http.read();
 
-          readedString = readedString + readedChar;
-          //Serial.print(readedChar);
+          readString = readString + readChar;
+          //Serial.print(readChar);
 
           // from char to string
 
@@ -378,5 +378,5 @@ String retrieveFromDatabase(String request) {
   http.stop();
   c.stop();
 
-  return readedString;
+  return readString;
 }
