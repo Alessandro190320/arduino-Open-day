@@ -1,29 +1,69 @@
-body {
-    background: url(../image/smartcity3.jpg) !important;
+.bgImage {
+    background: url('../image/smartcity3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 10%;
     background-attachment: fixed;
 }
 
-.backgd {
-    /*background: url(../image/smartcity3.jpg);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 10%;
-    background-attachment: fixed;
+.glassEffect{
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+}
+
+.glassEffectTextInput{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.glassEffectTextInput:focus{
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(122, 243, 122);
+    color: white;
+}
+
+.glassEffectTextInput::placeholder{
+    color:white;
+    font-style: italic;
+}
+
+.glassEffectGreenButton{
+    outline: none;
+    background: linear-gradient(135deg, rgba(40, 244, 94, 0.4), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    color:white;
+}
+
+.glassEffectGreenButton:hover{
+    outline: none;
+    background: linear-gradient(135deg, rgba(30, 178, 70, 0.9), rgba(21, 94, 18, 0.7));
+    backdrop-filter: blur(5px);
+    color:white;
+}
+
+.glassEffectRedButton{
+    outline: none;
+    background: linear-gradient(135deg, rgba(152, 15, 31, 0.851), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    color:white;
+}
+
+.glassEffectRedButton:hover{
+    outline: none;
+    background: linear-gradient(135deg, rgba(148, 14, 32, 0.9), rgba(223, 8, 8, 0.7));
+    backdrop-filter: blur(5px);
+    color:white;
 }
 
 .titolo {
     color: #fff;
     font-size: 5rem;
-    text-align: center !important;
 }
 
 .box {
-    /*
-    height: 200px;
-    width: 500px;//*/
     margin-left: auto;
     margin-right: auto;
     background: #123;
@@ -261,3 +301,4 @@ body {
     color: white;
     transition: all .5s;
 }
+

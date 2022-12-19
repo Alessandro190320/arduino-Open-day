@@ -1,6 +1,5 @@
-<!DOCTYPE html5>
-<html>
-
+<!doctype html>
+<html lang="it">
     <?php
         $page = $_SERVER['PHP_SELF'];
         $db = new mysqli("localhost", "root", "", "scuola2223");
@@ -65,235 +64,212 @@
             $rs = $db->query($sql);
         }
 
+        // string OLED
+        if(isset($_POST['oledTextInput'])){
+            $value = $_POST['oledTextInput'];
+            $sql = "UPDATE arduino SET String = \"$value\" WHERE Descr = \"oled\"";
+            $rs = $db->query($sql);
+            Header('Location: ' . $_SERVER['PHP_SELF']);
+            exit(); //optional
+        }
+
         $db->close();
     ?>
-
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="./style/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <title>Progetto arduino</title>
-        <!--<meta http-equiv="refresh" content="<?php //echo $sec ?>;URL='<?php //echo $page ?>'">-->
     </head>
+    <body class="bgImage">
 
-    <body>
-        <div class="backgd">
+        </div>
+        <div class="container">
+            <h1 class="titolo text-center">SMARTCITY</h1>
+
             <div class="container">
-                <div class="container">
-                    <div class="col-md-12">
-                        <h1 class="titolo">SMARTCITY</h1>
-                    </div>
-                </div>
+                <div class="row pt-5">
 
-                <div class="container">
-                    <div class="row" style="padding-top: 5%;">
-                        <div class="col-md-6">
-                            <div class="box">
-                                <div class="row" style="padding-top: 15%;">
-                                    <div class="col-sm-3 col-xl-3"></div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <form method="post">
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="submit" class="btn btn-danger" name="Off_0" value="Off_0">Off</button>
-                                                <button type="submit" class="btn btn-success" name="On_0" value="On_0">On</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <h4 style="color:white">SEMAFORO</h4>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3"></div>
+                    <!-- SEMAFORO -->
+                    <div class="col">
+                        <div class="container-sm rounded-5 shadow mt-3 p-4 glassEffect" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                            <div class="row p-5 align-items-center justify-content-around">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-3">
+                                    <form method="post">
+                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                            <button type="submit" class="btn glassEffectRedButton" name="Off_0" value="Off_0">Off</button>
+                                            <button type="submit" class="btn glassEffectGreenButton" name="On_0" value="On_0">On</button>
+                                        </div>
+                                    </form>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="box">
-                                <div class="row" style="padding-top: 15%;">
-                                    <div class="col-sm-3 col-xl-3"></div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <form method="post">
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="submit" class="btn btn-danger" name="Off_1" value="Off_1">Off</button>
-                                                <button type="submit" class="btn btn-success" name="On_1" value="On_1">On</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <h4 style="color:white">CASA 1</h4>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3"></div>
+                                <div class="col-sm-3">
+                                    <h4 style="color:white">SEMAFORO</h4>
                                 </div>
-                                <div class="row" style="padding-top: 5%;">
-                                    <div class="col-sm-3 col-xl-3"></div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <form method="post">
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="submit" class="btn btn-danger" name="Off_2" value="Off_2">Off</button>
-                                                <button type="submit" class="btn btn-success" name="On_2" value="On_2">On</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <h4 style="color:white">CASA 2</h4>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3"></div>
-                                </div>
-                                <!-- BOTTONE 1 - led1 -->
-                                <!-- BOTTONE 2 - led2 -->
+                                <div class="col-sm-3"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="padding-top: 5%;">
-                        <div class="col-sm-6 col-xl-6 ">
-                            <div class="box">
-                                <div class="row" style="padding-top: 15%;">
-                                    <div class="col-sm-3 col-xl-3"></div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <form method="post">
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="submit" class="btn btn-danger" name="Off_3" value="Off_3">Off</button>
-                                                <button type="submit" class="btn btn-success" name="On_3" value="On_3">On</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <h4 style="color:white">FIUME</h4>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3"></div>
-                                </div>
-                                <!-- BOTTONE 3 - pump -->
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-6 ">
-                            <div class="box">
-                                <div class="row" style="padding-top: 15%;">
-                                    <div class="col-sm-3 col-xl-3"></div>
-                                    <div class="col-sm-3 col-xl-3">
-                                        <form method="post">
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="submit" class="btn btn-danger" name="Off_4" value="Off_4">Off</button>
-                                                <button type="submit" class="btn btn-success" name="On_4" value="On_4">On</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-5">
-                                        <h4 style="color:white">OLED SCHERMO</h4>
-                                    </div>
-                                    <div class="col-sm-3 col-xl-3"></div>
-                                    <div class="row " style="padding-top: 8%;">
-                                        <div class="col-sm-2 col-xl-2"></div>
 
-                                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                            <!--
-                                            <div class="col-sm-4 col-xl-4">
-                                                <label for="" class="visually-hidden" title="prova"></label>
-                                                <input type="text" class="form-control" id="" placeholder="Inserisci nome" maxlength="10" name="oledTextInput">
-                                                <button type="submit" class="btn btn-success mb-3">INVIA</button>
-                                            </div>-->
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Inserisci nome" aria-label="Recipient's username" maxlength="10" aria-describedby="basic-addon2" name="oledTextInput">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-success" type="submit">INVIA</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <div class="col-sm-4 col-xl-4"></div>
-                                        <div class="col-sm-2 col-xl-2"></div>
-                                    </div>
+                    <!-- CASA 1/2 -->
+                    <div class="col">
+                        <div class="container-sm rounded-5 shadow mt-3 p-4 glassEffect" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                            <div class="row p-3 align-items-center justify-content-around">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-3">
+                                    <form method="post">
+                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                            <button type="submit" class="btn glassEffectRedButton" name="Off_1" value="Off_1">Off</button>
+                                            <button type="submit" class="btn glassEffectGreenButton" name="On_1" value="On_1">On</button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <!-- BOTTONE 4 -->
+                                <div class="col-sm-3">
+                                    <h4 style="color:white">CASA 1</h4>
+                                </div>
+                                <div class="col-sm-3"></div>
                             </div>
-                        </div>
-                    </div>
-                    </br></br>
-                    <div class="col-sm-6 col-xl-6 ">
-                        <div class="box2">
-                            <div class="row" style="padding-top: 5%;">
+
+                            <div class="row p-3 align-items-center justify-content-around">
                                 <div class="col-sm-3 col-xl-3"></div>
                                 <div class="col-sm-3 col-xl-3">
                                     <form method="post">
                                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="submit" class="btn btn-danger" name="Off_5" value="Off_5">Off</button>
-                                            <button type="submit" class="btn btn-success" name="On_5" value="On_5">On</button>
+                                            <button type="submit" class="btn glassEffectRedButton" name="Off_2" value="Off_2">Off</button>
+                                            <button type="submit" class="btn glassEffectGreenButton" name="On_2" value="On_2">On</button>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="col-sm-3 col-xl-3">
-                                    <h4 style="color:white">PANNELLO SOLARE</h4>
+                                    <h4 style="color:white">CASA 2</h4>
                                 </div>
                                 <div class="col-sm-3 col-xl-3"></div>
-                                </br>
-
-                                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                                    <?php
-                                    $db = new mysqli("localhost", "root", "", "scuola2223");
-                                    $sql = "SELECT String FROM arduino WHERE descr='solarPanel'";
-                                    $rs = $db->query($sql);
-
-                                    $record = $rs->fetch_assoc();
-
-                                    //intval( $string )
-                                    echo ("
-                                        <div class=\"col-sm-0 col-xl-11\" style=\"padding-left: 8%;\">
-                                            <div class=\"progress-bar progress-bar-striped\" style=\"min-width: 20px;\"> </div>
-                                            <!--<button onclick=\"dynamicBar(
-                                    ");
-                                    $newPercentage = intval($record['String']) * 100 / 400;
-                                    //echo($newPercentage);
-                                    echo ("
-                                        )\"> prova</button>-->
-                                        </div>
-                                    ");
-
-                                    echo ("
-                                        <script>
-                                            var i = 0;
-                                            var bar = document.querySelector(\".progress-bar\");
-                                            function makeProgress(){
-                                                if(i < $newPercentage){
-                                                    i = i + 1;
-                                                    bar.style.width = i + \"%\";
-                                                    bar.innerText = \"⚡ \" + i + \"% ⚡\"  ;
-                                                }
-
-                                                // Wait for sometime before running this script again
-                                                setTimeout(\"makeProgress()\", $newPercentage);
-                                            }
-                                            makeProgress();
-                                        </script>
-                                    ");
-                                    $db->close();
-                                    ?>
-                                </form>
                             </div>
                         </div>
                     </div>
-                    <!-- BOTTONE 4 - oled -->
                 </div>
+
+                <div class="row pt-5">
+
+                    <!--FIUME-->
+                    <div class="col">
+                        <div class="container-sm rounded-5 shadow mt-3 p-4 glassEffect" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                            <div class="row p-5">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-3">
+                                    <form method="post">
+                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                            <button type="submit" class="btn glassEffectRedButton" name="Off_3" value="Off_3">Off</button>
+                                            <button type="submit" class="btn glassEffectGreenButton" name="On_3" value="On_3">On</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h4 style="color:white">FIUME</h4>
+                                </div>
+                                <div class="col-sm-3"></div>
+                            </div>
+                        </div>
+                    </div><!--END FIUME-->
+
+                    <!--SCHERMO OLED-->
+                    <div class="col">
+                        <div class="container-sm rounded-5 shadow mt-3 p-4 glassEffect" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                            <div class="row p-3 align-items-center justify-content-around">
+                                <div class="col-sm-3 col-xl-3"></div>
+                                <div class="col-sm-3 col-xl-3">
+                                    <form method="post">
+                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                            <button type="submit" class="btn glassEffectRedButton" name="Off_4" value="Off_4">Off</button>
+                                            <button type="submit" class="btn glassEffectGreenButton" name="On_4" value="On_4">On</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-3 col-xl-5">
+                                    <h4 style="color:white">OLED SCHERMO</h4>
+                                </div>
+                                <div class="col-sm-3 col-xl-3"></div>
+                            </div>
+
+                            <div class="row p-3 align-items-center justify-content-around">
+                                <div class="col">
+                                    <form method="post" action="<?php echo($_SERVER['PHP_SELF']); ?>">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control glassEffectTextInput" placeholder="Inserisci nome" aria-label="Recipient's username" maxlength="10" aria-describedby="basic-addon2" name="oledTextInput">
+                                            <div class="input-group-append">
+                                                <button class="btn glassEffectGreenButton" type="submit">INVIA</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--PANNELLO SOLARE-->
+                <div class="row pt-5">
+                    <div class="container-sm rounded-5 shadow mt-3 p-4 glassEffect" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                        <div class="row p-5">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3">
+                                <form method="post">
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <button type="submit" class="btn glassEffectRedButton" name="Off_5" value="Off_5">Off</button>
+                                        <button type="submit" class="btn glassEffectGreenButton" name="On_5" value="On_5">On</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 style="color:white">PANNELLO SOLARE</h4>
+                            </div>
+                            <div class="col-sm-3"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="progress ml-5 mr-5 mb-3 glassEffect" style=" height: 30px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--END PANNELLO SOLARE-->
             </div>
-            <br /><br />
         </div>
 
+        <!-- SCRIPTS -->
         <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // collect value of input field
-                $value = $_POST['oledTextInput'];
-                $db = new mysqli("localhost", "root", "", "scuola2223");   // creazione collegamento con il mio database
-                $sql = "UPDATE arduino SET String = \"$value\" WHERE Descr = \"oled\"";    // creazione della query
+            $db = new mysqli("localhost", "root", "", "scuola2223");
+            $sql = "SELECT String FROM arduino WHERE descr='solarPanel'";
+            $rs = $db->query($sql);
+            $record = $rs->fetch_assoc();
+            $newPercentage = intval($record['String']) * 100 / 400;
+            $db->close();
 
-                $rs = $db->query($sql);     // result che prende il collegamento e effetua la query
+            echo ("
+                <script>
+                    var i = 0;
+                    var bar = document.querySelector(\".progress-bar\");
+                    function makeProgress(){
+                        if(i < $newPercentage){
+                            i = i + 1;
+                            bar.style.width = i + \"%\";
+                            bar.innerText = \"⚡ \" + i + \"% ⚡\"  ;
+                        }
 
-                $db->close();   // chiudo la mia connessione
-
-                Header('Location: ' . $_SERVER['PHP_SELF']);
-                exit(); //optional
-            } //*/
+                        // Wait for sometime before running this script again
+                        setTimeout(\"makeProgress()\", $newPercentage);
+                    }
+                    makeProgress();
+                </script>
+            ");
         ?>
-
-        <!-- SCRIPT-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="./script/vanilla-tilt.js"></script> <!--vanilla tilt js-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
-
 </html>
