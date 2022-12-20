@@ -13,18 +13,17 @@
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Progetto arduino</title>
-    <meta http-equiv="refresh" content="<?php echo $sec ?>;URL='<?php echo $page ?>'">
 </head>
 
 <!--TODO: test di todo -->
 <body>
 
-    <div class="backgd">
+    <div class="bgImage">
 
         <div class="container">
             <div class="container">
                 <div class="col-md-12">
-                    <h1 class="titolo">SMARTCITY</h1>
+                    <h1 class="titolo text-center">SMARTCITY</h1>
                 </div>
             </div>
 
